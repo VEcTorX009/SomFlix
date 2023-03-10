@@ -1,4 +1,4 @@
-# SomFlix - Netflix Clone
+# SomFlix | Netflix Clone
 
 Netflix Cloned functional and respnnsive website that fetches real time updated movies, has payment and login authentication.
 
