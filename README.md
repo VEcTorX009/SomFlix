@@ -10,4 +10,5 @@ Netflix Cloned functional and respnnsive website that fetches real time updated 
 
 **Frontend** - NextJS and Tailwind
 **Backend** - NextJS
+**Database** - Firebase
 **Libraries** - Material Icons, React Icons and Rest API
