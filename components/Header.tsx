@@ -22,7 +22,9 @@ function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [])    
+
+  
 
   return (
     <header className={`${isScrolled && 'bg-[#141414]'}`}>
