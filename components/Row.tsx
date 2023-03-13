@@ -1,17 +1,15 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
-// import { DocumentData } from 'firebase/firestore'
+import { DocumentData } from "firebase/firestore";
 import { useRef, useState } from "react";
 import { Movie } from "../utils/typing";
 import Thumbnail from "./Thumbnail";
 
 interface Props {
   title: string;
-  //   movies: Movie[] | DocumentData[]
-  movies: Movie[];
+  movies: Movie[] | DocumentData[];
 }
 
 function Row({ title, movies }: Props) {
-    // creating a sliding on click horizonatal scroll (carousel)
   const rowRef = useRef<HTMLDivElement>(null);
   const [isMoved, setIsMoved] = useState(false);
 
@@ -30,8 +28,10 @@ function Row({ title, movies }: Props) {
 
   return (
     <div className="h-40 space-y-0.5 md:space-y-2">
+      <section id={`${title}`}>
+
       <h2 className="w-56 cursor-pointer text-sm font-semibold text-[#e5e5e5] transition duration-200 hover:text-white md:text-2xl">
-        {title}
+       {title} 
       </h2>
       <div className="group relative md:-ml-2">
         <ChevronLeftIcon
@@ -53,6 +53,7 @@ function Row({ title, movies }: Props) {
           onClick={() => handleClick("right")}
         />
       </div>
+      </section>
     </div>
   );
 }
